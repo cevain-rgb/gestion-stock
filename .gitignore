@@ -1,0 +1,7 @@
+.env
+node_modules/
+storage/logs/*.log
+
+tests.*
+test.*
+tests/
