@@ -18,7 +18,8 @@
                 <div class="flex justify-between"><dt class="text-slate-500">Nom complet</dt><dd class="font-medium"><?= e($u['prenom'].' '.$u['nom']) ?></dd></div>
                 <div class="flex justify-between"><dt class="text-slate-500">Login</dt><dd class="font-mono"><?= e($u['login']) ?></dd></div>
                 <div class="flex justify-between"><dt class="text-slate-500">Groupe</dt><dd><span class="bg-slate-100 text-slate-700 px-2 py-0.5 rounded text-xs"><?= e($u['groupe_libelle']) ?></span></dd></div>
-                <div class="flex justify-between"><dt class="text-slate-500">Créé le</dt><dd><?= dateFr($u['created_at']) ?></dd></div>
+                <br>
+                <!-- <div class="flex justify-between"><dt class="text-slate-500">Créé le</dt><dd><.?= dateFr($u['created_at']) ?></dd></div> -->
             </dl>
             <?php if (!empty($_SESSION['droits']['securite.modifier'])): ?>
             <div class="mt-4 pt-4 border-t border-slate-100 flex gap-2">
