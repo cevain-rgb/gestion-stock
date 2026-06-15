@@ -117,7 +117,7 @@ $totalPages = max(1, (int)ceil($total / $perPage));
                     <?php endif; ?>
                     <?php if (!empty($_SESSION['droits']['securite.supprimer']) && (int)$u['id_utilisateur'] !== (int)$_SESSION['user_id']): ?>
                     <form method="POST" action="<?= url('utilisateurs/comptes/'.$u['id_utilisateur'].'/supprimer') ?>"
-                          onsubmit="return confirm('Supprimer cet utilisateur ?')">
+                            onsubmit="return confirm('Supprimer cet utilisateur ?')">
                         <?= csrfField() ?>
                         <button class="btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button>
                     </form>

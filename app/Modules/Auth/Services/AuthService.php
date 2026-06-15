@@ -81,7 +81,7 @@ class AuthService
 
     public function aDroit(string $module, string $action): bool
     {
-        return (bool)($_SESSION['droits'][$module . '.' . $action] ?? false);
+        return (bool)($_SESSION['droits'][$module . '__' . $action] ?? false);
     }
 
     // ─── Brute-force ─────────────────────────────────────────────────────────

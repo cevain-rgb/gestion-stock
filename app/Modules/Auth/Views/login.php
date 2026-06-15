@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion - StockManager</title>
     <link rel="stylesheet" href="<?= asset('css/app.css') ?>">
-    <link rel="stylesheet" href="<?= asset('fontawesome/css/all.min.css') ?>">
     <script src="<?= asset('fontawesome/js/all.min.js') ?>"></script>
 </head>
 <body class="min-h-screen bg-slate-900 flex items-center justify-center p-4">

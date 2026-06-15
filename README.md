@@ -43,6 +43,7 @@ APP_URL=http://localhost/gestion-stock/public
 
 ### 3. Compilation Tailwind CSS
 
+Installation des dependances et compilation:
 ```bash
 npm install
 npm run build
@@ -53,18 +54,25 @@ Pour le développement (recompilation automatique) :
 npm run watch
 ```
 
-### 4. FontAwesome
+**Recommendation:**
+Utiliser que le fichier statique(sans installer Taillwind):
+```
+public/assets/css/app.css
+```
+Apres compilation en dev avec 
+```bash
+npm run build
+```
 
-Télécharger FontAwesome 6 Free et placer les fichiers dans :
+### 4. FontAwesome (pour les icones)
+
+Télécharger FontAwesome 6 Free et placer les fichiers comme suit dans :
 ```
 public/assets/fontawesome/
 ```
-<!-- ├── css/
-│   └── all.min.css
-└── webfonts/
-    ├── fa-solid-900.woff2
-    ├── fa-regular-400.woff2
-    └── fa-brands-400.woff2 -->
+├── js/
+│   └── all.min.js
+└── LICENSE.txt
 
 ### 5. Serveur web
 
@@ -103,7 +111,7 @@ gestion-stock/
 | P2    | 🔜 À faire | Module Approvisionnement |
 | P3    | 🔜 À faire | Module Vente |
 | P4    | ✅ Fait  | Module Utilisateurs |
-| P5    | 🔜 À faire | Audit + Corbeille XML |
+| P5    | ✅ Fait | Audit + Corbeille XML |
 
 ## Identifiants par défaut
 
@@ -111,4 +119,4 @@ gestion-stock/
 |-------|-------------|--------|
 | admin | admin123    | Administrateur |
 
-<!-- ⚠️ **Changer le mot de passe admin dès le premier déploiement.** -->
+⚠️ **Changer le mot de passe admin dès le premier déploiement.**

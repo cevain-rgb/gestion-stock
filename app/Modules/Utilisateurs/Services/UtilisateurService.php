@@ -91,7 +91,7 @@ class UtilisateurService
         $coches = [];
         foreach (DroitModel::MODULES as $m) {
             foreach (DroitModel::ACTIONS as $a) {
-                $key = $m . '.' . $a;
+                $key = $m . '__' . $a;
                 if (!empty($postData[$key])) $coches[$key] = true;
             }
         }

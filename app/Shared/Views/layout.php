@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= e($pageTitle ?? $_pageTitle ?? 'StockManager') ?> - StockManager</title>
     <link rel="stylesheet" href="<?= asset('css/app.css') ?>">
-    <link rel="stylesheet" href="<?= asset('fontawesome/css/all.min.css') ?>">
     <script src="<?= asset('fontawesome/js/all.min.js') ?>"></script>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased">
