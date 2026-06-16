@@ -56,7 +56,7 @@ class AuthModel
         );
         $droits = [];
         foreach ($rows as $row) {
-            $droits[$row['module'] . '__' . $row['action']] = (bool)$row['autorise'];
+            $droits[$row['module'] . '.' . $row['action']] = (bool)$row['autorise'];
         }
         return $droits;
     }

@@ -48,7 +48,7 @@ $labelsAction = ['consulter'=>'Consulter','creer'=>'Créer','modifier'=>'Modifie
                     </td>
                     <?php foreach ($actions as $a): ?>
                     <td class="px-3 py-4 text-center">
-                        <input type="checkbox" name="<?= $m.'__'.$a ?>"
+                        <input type="checkbox" name="<?= $m.'.'.$a ?>"
                             class="w-4 h-4 rounded accent-violet-600 cursor-pointer module-<?= $m ?>"
                             <?= !empty($matrice[$m][$a]) ? 'checked' : '' ?>>
                     </td>

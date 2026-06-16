@@ -44,7 +44,7 @@ class DroitModel
             // Réinsérer
             foreach (self::MODULES as $module) {
                 foreach (self::ACTIONS as $action) {
-                    $key      = $module . '__' . $action;
+                    $key      = $module . '_' . $action;
                     $autorise = isset($coches[$key]) ? 'TRUE' : 'FALSE';
                     $this->db->execute(
                         "INSERT INTO droit(id_groupe, module, action, autorise)
