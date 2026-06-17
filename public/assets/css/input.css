@@ -65,4 +65,7 @@
   .data-table tbody td {
     @apply px-4 py-3;
   }
+  h1{
+    @apply text-base md:text-xl font-bold text-slate-800
+  }
 }

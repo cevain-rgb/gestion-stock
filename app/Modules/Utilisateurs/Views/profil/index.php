@@ -1,5 +1,5 @@
 <div class="max-w-3xl mx-auto">
-    <h1 class="text-xl font-bold text-slate-800 mb-6">Mon profil</h1>
+    <h1 class=" mb-6">Mon profil</h1>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
         <!-- Infos profil -->
@@ -77,7 +77,7 @@
     </div>
 
     <!-- Historique connexions -->
-    <div class="card overflow-hidden">
+    <div class="card overflow-x-auto">
         <div class="card-header"><h2 class="font-semibold text-slate-700">Mes dernières connexions</h2></div>
         <?php if (empty($historique)): ?>
             <div class="py-8 text-center text-slate-400 text-sm">Aucun historique.</div>

@@ -8,7 +8,7 @@ $labelsAction = ['consulter'=>'Consulter','creer'=>'Créer','modifier'=>'Modifie
 <div class="flex items-center gap-3 mb-6">
     <a href="<?= url('utilisateurs/groupes') ?>" class="btn-secondary btn-sm"><i class="fa-solid fa-arrow-left"></i></a>
     <div>
-        <h1 class="text-xl font-bold text-slate-800">Droits - <?= e($groupe['libelle']) ?></h1>
+        <h1>Droits - <?= e($groupe['libelle']) ?></h1>
         <p class="text-sm text-slate-500">Définissez les permissions de ce groupe par module et action.</p>
     </div>
 </div>

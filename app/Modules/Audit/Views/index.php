@@ -21,7 +21,7 @@ $actionIcons = [
 <!-- En-tête -->
 <div class="flex items-center justify-between mb-6">
     <div>
-        <h1 class="text-xl font-bold text-slate-800">Journal d'audit</h1>
+        <h1>Journal d'audit</h1>
         <p class="text-sm text-slate-500 mt-0.5"><?= number_format($total, 0, ',', ' ') ?> entrée(s) enregistrée(s)</p>
     </div>
     <div class="flex items-center gap-2">
@@ -128,7 +128,7 @@ foreach ($kpiCards as [$lbl, $val, $ico, $txtCls, $bgCls]):
 </div>
 
 <!-- Tableau journal -->
-<div class="card overflow-hidden">
+<div class="card overflow-x-auto">
     <table class="data-table">
         <thead><tr>
             <th class="w-8">#</th>

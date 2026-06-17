@@ -1,7 +1,7 @@
 <?php $perPage = $perPage ?? 20; $totalPages = max(1, (int)ceil($total / $perPage)); ?>
 <div class="flex items-center justify-between mb-6">
     <div>
-        <h1 class="text-xl font-bold text-slate-800">Groupes d'utilisateurs</h1>
+        <h1>Groupes d'utilisateurs</h1>
         <p class="text-sm text-slate-500 mt-0.5"><?= $total ?> groupe(s)</p>
     </div>
     <?php if (!empty($_SESSION['droits']['securite.creer'])): ?>
@@ -10,7 +10,7 @@
     </a>
     <?php endif; ?>
 </div>
-<div class="card overflow-hidden">
+<div class="card overflow-x-auto">
     <table class="data-table">
         <thead><tr>
             <th>Groupe</th><th>Description</th><th class="text-center">Membres</th><th class="text-center">Actions</th>

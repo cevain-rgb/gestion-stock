@@ -2,7 +2,7 @@
     <div class="flex items-center gap-3 mb-6">
         <a href="<?= url('archive') ?>" class="btn-secondary btn-sm"><i class="fa-solid fa-arrow-left"></i></a>
         <div>
-            <h1 class="text-xl font-bold text-slate-800">Archive #<?= $archive['id_archive'] ?></h1>
+            <h1>Archive #<?= $archive['id_archive'] ?></h1>
             <p class="text-sm text-slate-500"><?= e($archive['entite']) ?> · ID <?= $archive['id_entite'] ?></p>
         </div>
         <?php if ($archive['action'] === 'suppression'): ?>

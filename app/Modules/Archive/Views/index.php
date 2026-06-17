@@ -15,7 +15,7 @@ $labelsEntite = [
 
 <div class="flex items-center justify-between mb-6">
     <div>
-        <h1 class="text-xl font-bold text-slate-800">Corbeille</h1>
+        <h1>Corbeille</h1>
         <p class="text-sm text-slate-500 mt-0.5"><?= $total ?> élément(s) archivé(s)</p>
     </div>
     <div class="flex items-center gap-2 text-xs text-slate-400 bg-amber-50 border border-amber-200 text-amber-700 px-3 py-2 rounded-lg">
@@ -83,7 +83,7 @@ $labelsEntite = [
 </div>
 
 <!-- Tableau -->
-<div class="card overflow-hidden">
+<div class="card overflow-x-auto">
     <table class="data-table">
         <thead><tr>
             <th>Entité</th>

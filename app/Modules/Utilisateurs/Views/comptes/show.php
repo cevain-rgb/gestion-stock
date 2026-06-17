@@ -2,7 +2,7 @@
 <div class="max-w-3xl mx-auto">
     <div class="flex items-center gap-3 mb-6">
         <a href="<?= url('utilisateurs/comptes') ?>" class="btn-secondary btn-sm"><i class="fa-solid fa-arrow-left"></i></a>
-        <h1 class="text-xl font-bold text-slate-800"><?= e($u['prenom'].' '.$u['nom']) ?></h1>
+        <h1><?= e($u['prenom'].' '.$u['nom']) ?></h1>
         <?php if ($u['actif']): ?>
             <span class="text-xs bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full font-medium">Actif</span>
         <?php else: ?>
@@ -57,7 +57,7 @@
     </div>
 
     <!-- Historique connexions -->
-    <div class="card overflow-hidden">
+    <div class="card overflow-x-auto">
         <div class="card-header">
             <h2 class="font-semibold text-slate-700">Historique des connexions</h2>
         </div>

@@ -1,7 +1,7 @@
 <div class="max-w-3xl mx-auto">
     <div class="flex items-center gap-3 mb-6">
         <a href="<?= url('audit') ?>" class="btn-secondary btn-sm"><i class="fa-solid fa-arrow-left"></i></a>
-        <h1 class="text-xl font-bold text-slate-800">Détail — entrée #<?= $entree['id_journal'] ?></h1>
+        <h1>Détail — entrée #<?= $entree['id_journal'] ?></h1>
     </div>
 
     <!-- Résumé -->

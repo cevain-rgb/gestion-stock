@@ -13,9 +13,16 @@ Application web PHP/PostgreSQL MVC-POO modulaire pour la gestion complète de st
 
 ### 1. Base de données
 
+Sous windows
 ```bash
 psql -U postgres -c "CREATE DATABASE gestion_stock;"
 psql -U postgres -d gestion_stock -f schema.sql
+```
+ou
+Sous Linux/mac
+```bash
+sudo -u postgres psql -c "CREATE DATABASE gestion_stock;"
+sudo -u postgres psql -d gestion_stock -f schema.sql
 ```
 
 Le fichier `schema.sql` crée toutes les tables, triggers, fonctions et insère les données initiales
@@ -41,7 +48,7 @@ DB_PASSWORD=votre_mot_de_passe
 APP_URL=http://localhost/gestion-stock/public
 ```
 
-### 3. Compilation Tailwind CSS
+### 3. Installation et Compilation Tailwind CSS
 
 Installation des dependances et compilation:
 ```bash
@@ -55,7 +62,7 @@ npm run watch
 ```
 
 **Recommendation:**
-Utiliser que le fichier statique(sans installer Taillwind):
+Utiliser uniquement le fichier statique(sans installer Taillwind):
 ```
 public/assets/css/app.css
 ```
@@ -93,7 +100,7 @@ server {
 ```
 gestion-stock/
 ├── app/
-│   ├── Core/           ← Database, Router, Controller, Session, Autoloader
+│   ├── Core/           ← Database, Router,Controller, Session, Autoloader
 │   ├── Modules/        ← Un dossier par module (Auth, Dashboard, ...)
 │   └── Shared/         ← Layout, helpers, vues communes
 ├── config/             ← database.php, app.php
@@ -107,7 +114,7 @@ gestion-stock/
 | Phase | État    | Contenu |
 |-------|---------|---------|
 | P0    | ✅ Fait  | Core, Auth, Layout, Dashboard |
-| P1    | 🔜 À faire | Module Structure |
+| P1    |  ✅ Fait | Module Structure |
 | P2    | 🔜 À faire | Module Approvisionnement |
 | P3    | 🔜 À faire | Module Vente |
 | P4    | ✅ Fait  | Module Utilisateurs |

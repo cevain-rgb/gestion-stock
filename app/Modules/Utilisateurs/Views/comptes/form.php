@@ -1,7 +1,7 @@
 <div class="max-w-2xl mx-auto">
     <div class="flex items-center gap-3 mb-6">
         <a href="<?= url('utilisateurs/comptes') ?>" class="btn-secondary btn-sm"><i class="fa-solid fa-arrow-left"></i></a>
-        <h1 class="text-xl font-bold text-slate-800">
+        <h1>
             <?= $utilisateur ? 'Modifier l\'utilisateur' : 'Nouvel utilisateur' ?>
         </h1>
     </div>

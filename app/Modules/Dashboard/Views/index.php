@@ -6,7 +6,7 @@ $pageTitle = 'Tableau de bord';
 <!-- En-tête de page -->
 <div class="flex items-center justify-between mb-6">
     <div>
-        <h1 class="text-xl font-bold text-slate-800">Tableau de bord</h1>
+        <h1>Tableau de bord</h1>
         <p class="text-sm text-slate-500 mt-0.5">
             Bonjour, <?= e(($_SESSION['user_prenom'] ?? '') . ' ' . ($_SESSION['user_nom'] ?? '')) ?> -
             <?= (new DateTime())->format('l d F Y') ?>

@@ -1,7 +1,7 @@
 <div class="max-w-lg mx-auto">
     <div class="flex items-center gap-3 mb-6">
         <a href="<?= url('utilisateurs/groupes') ?>" class="btn-secondary btn-sm"><i class="fa-solid fa-arrow-left"></i></a>
-        <h1 class="text-xl font-bold text-slate-800"><?= $groupe ? 'Modifier le groupe' : 'Nouveau groupe' ?></h1>
+        <h1><?= $groupe ? 'Modifier le groupe' : 'Nouveau groupe' ?></h1>
     </div>
     <div class="card card-body">
         <form method="POST" action="<?= $groupe ? url('utilisateurs/groupes/'.$groupe['id_groupe'].'/edit') : url('utilisateurs/groupes/creer') ?>">
