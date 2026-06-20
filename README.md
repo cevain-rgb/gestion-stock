@@ -115,7 +115,7 @@ gestion-stock/
 |-------|---------|---------|
 | P0    | ✅ Fait  | Core, Auth, Layout, Dashboard |
 | P1    |  ✅ Fait | Module Structure |
-| P2    | 🔜 À faire | Module Approvisionnement |
+| P2    | ✅ Fait | Module Approvisionnement |
 | P3    | 🔜 À faire | Module Vente |
 | P4    | ✅ Fait  | Module Utilisateurs |
 | P5    | ✅ Fait | Audit + Corbeille XML |
