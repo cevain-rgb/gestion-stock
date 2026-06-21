@@ -50,3 +50,12 @@ $router->post('/structure/banques/:id/edit',      'Structure\Controllers\BanqueC
 $router->post('/structure/banques/:id/versement', 'Structure\Controllers\BanqueController@versement');
 $router->post('/structure/banques/:id/supprimer', 'Structure\Controllers\BanqueController@supprimer');
 $router->get('/structure/banques/:id',            'Structure\Controllers\BanqueController@show');
+
+// ── Éditions & Rapports Structure ────────────────────────────────────────
+$router->get('/structure/rapports',                        'Structure\Controllers\EditionStructureController@index');
+$router->get('/structure/rapports/produits-familles',      'Structure\Controllers\EditionStructureController@listeProduitsFamilles');
+$router->get('/structure/familles/:id/produits',           'Structure\Controllers\EditionStructureController@produitsFamille');
+$router->get('/structure/rapports/fournisseurs',           'Structure\Controllers\EditionStructureController@listeFournisseurs');
+$router->get('/structure/rapports/clients',                'Structure\Controllers\EditionStructureController@listeClients');
+$router->get('/structure/rapports/banques',                'Structure\Controllers\EditionStructureController@listeBanques');
+$router->get('/structure/rapports/versements',             'Structure\Controllers\EditionStructureController@versementsBanque');

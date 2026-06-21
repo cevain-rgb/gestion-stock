@@ -1,6 +1,12 @@
 <div class="flex items-center justify-between mb-6">
     <div><h1 class="text-xl font-bold text-slate-800">Banques</h1>
     <p class="text-sm text-slate-500"><?= count($banques) ?> banque(s)</p></div>
+    <div class="flex items-center gap-2">
+        <?php if (!empty($_SESSION['droits']['structure.imprimer'])): ?>
+        <a href="<?= url('structure/rapports/banques') ?>" target="_blank" class="btn-secondary btn-sm"><i class="fa-solid fa-print"></i> Imprimer liste</a>
+        <a href="<?= url('structure/rapports/versements') ?>" target="_blank" class="btn-secondary btn-sm"><i class="fa-solid fa-money-bill-transfer"></i> État versements</a>
+        <?php endif; ?>
+    </div>
 </div>
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
     <div class="space-y-3">
@@ -55,7 +61,7 @@
                 <button type="submit" class="btn-primary w-full"><i class="fa-solid fa-plus"></i> Créer</button>
             </form>
         </div>
-        <div class="card card-body mt-2" id="versementCard" style="display:none">
+        <div class="card card-body" id="versementCard" style="display:none">
             <h2 class="font-semibold text-slate-700 mb-4">Enregistrer un versement</h2>
             <form method="POST" id="versementForm">
                 <?= csrfField() ?>
@@ -70,7 +76,7 @@
         </div>
         <?php endif; ?>
         <?php if(!empty($_SESSION['droits']['structure.modifier'])): ?>
-        <div class="card card-body mt-2" id="editBanqueCard" style="display:none">
+        <div class="card card-body" id="editBanqueCard" style="display:none">
             <h2 class="font-semibold text-slate-700 mb-4">Modifier la banque</h2>
             <form method="POST" id="editBanqueForm">
                 <?= csrfField() ?>

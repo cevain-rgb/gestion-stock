@@ -35,6 +35,7 @@
             </form>
             <?php endif; ?>
         </div></td>
+        <td class="text-center"><a href="<?= url('structure/familles/'.$f['id_famille'].'/produits') ?>" target="_blank" class="text-violet-500 hover:text-violet-700 text-sm" title="Voir les produits de cette famille"><i class="fa-solid fa-print"></i></a></td>
     </tr>
     <?php endforeach; ?>
     </tbody></table>

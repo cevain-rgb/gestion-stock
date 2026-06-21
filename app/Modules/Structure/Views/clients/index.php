@@ -1,9 +1,14 @@
 <?php $totalPages = max(1,(int)ceil($total/20)); ?>
 <div class="flex items-center justify-between mb-6">
     <div><h1 class="text-xl font-bold text-slate-800">Clients</h1><p class="text-sm text-slate-500"><?= $total ?> client(s)</p></div>
-    <?php if(!empty($_SESSION['droits']['structure.creer'])): ?>
-    <a href="<?= url('structure/clients/creer') ?>" class="btn-primary"><i class="fa-solid fa-plus"></i> Nouveau client</a>
-    <?php endif; ?>
+    <div class="flex items-center gap-2">
+        <?php if (!empty($_SESSION['droits']['structure.imprimer'])): ?>
+        <a href="<?= url('structure/rapports/clients') ?>" target="_blank" class="btn-secondary"><i class="fa-solid fa-print"></i> Imprimer liste</a>
+        <?php endif; ?>
+        <?php if(!empty($_SESSION['droits']['structure.creer'])): ?>
+        <a href="<?= url('structure/clients/creer') ?>" class="btn-primary"><i class="fa-solid fa-plus"></i> Nouveau client</a>
+        <?php endif; ?>
+    </div>
 </div>
 <div class="card card-body mb-4">
     <form method="GET" action="<?= url('structure/clients') ?>" class="flex flex-wrap items-end gap-3">
