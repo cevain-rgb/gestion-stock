@@ -78,6 +78,7 @@
                 <?= navItem('/vente/livraisons', 'fa-solid fa-truck', 'Livraisons', $currentUri) ?>
                 <?= navItem('/vente/factures', 'fa-solid fa-file-invoice-dollar', 'Factures', $currentUri) ?>
                 <?= navItem('/vente/sorties', 'fa-solid fa-box-open', 'Bons de sortie', $currentUri) ?>
+                <?= navItem('/vente/rapports', 'fa-solid fa-chart-bar', 'Rapports', $currentUri) ?>
             <?php endif; ?>
 
             <?php if (!empty($droits['structure.consulter'])): ?>
@@ -89,6 +90,7 @@
                 <?= navItem('/structure/fournisseurs', 'fa-solid fa-industry', 'Fournisseurs', $currentUri) ?>
                 <?= navItem('/structure/clients', 'fa-solid fa-users', 'Clients', $currentUri) ?>
                 <?= navItem('/structure/banques', 'fa-solid fa-building-columns', 'Banques', $currentUri) ?>
+                <?= navItem('/structure/rapports', 'fa-solid fa-print', 'Éditions', $currentUri) ?>
             <?php endif; ?>
 
             <?php if (!empty($droits['securite.consulter'])): ?>
