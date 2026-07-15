@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 //  Constantes fondamentales 
 define('BASE_PATH', dirname(__DIR__));
-define('BASE_URL', $_ENV['APP_URL'] ?? 'http://localhost/gestion-stock/public'); // override via .env
+define('BASE_URL', $_ENV['BASE_URL'] ?? 'http://localhost/gestion-stock/public'); // override via .env
 
 //  Timezone & encodage 
 date_default_timezone_set('Africa/Douala');

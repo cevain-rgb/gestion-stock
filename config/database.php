@@ -5,9 +5,9 @@
  * Adapter selon l'environnement.
  */
 return [
-    'host'     => $_ENV['DB_HOST']     ?? 'localhost',
-    'port'     => $_ENV['DB_PORT']     ?? '5432',
-    'dbname'   => $_ENV['DB_NAME']     ?? 'gestion_stock',
-    'user'     => $_ENV['DB_USER']     ?? 'postgres',
-    'password' => $_ENV['DB_PASSWORD'] ?? '',
+    'host'     => $_ENV['PGHOST']     ?? 'localhost',
+    'port'     => $_ENV['PGPORT']     ?? '5432',
+    'dbname'   => $_ENV['PGDATABASE']     ?? 'gestion_stock',
+    'user'     => $_ENV['PGUSER']     ?? 'postgres',
+    'password' => $_ENV['PGPASSWORD'] ?? '',
 ];
