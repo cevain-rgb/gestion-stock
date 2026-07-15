@@ -88,7 +88,7 @@ class ArchiveModel
 
         // Vérifier que la colonne deleted_at existe et que l'enregistrement est bien soft-deleted
         $row = $this->db->fetchOne(
-            "SELECT deleted_at FROM {$entite} WHERE oid_entite = :id OR id_{$entite} = :id2 LIMIT 1",
+            "SELECT deleted_at FROM {$entite} WHERE oid_entite = :id OR id_{($entite == 'groupe_utilisateur')?'groupe':$entite} = :id2 LIMIT 1",
             [':id' => $idEnt, ':id2' => $idEnt]
         );
 
@@ -97,7 +97,7 @@ class ArchiveModel
         // Restaurer
         $this->db->execute(
             "UPDATE {$entite} SET deleted_at = NULL, updated_at = NOW()
-             WHERE (oid_entite = :id OR id_{$entite} = :id2) AND deleted_at IS NOT NULL",
+             WHERE (oid_entite = :id OR id_{($entite=='groupe_utilisateur')?'groupe':$entite} = :id2) AND deleted_at IS NOT NULL",
             [':id' => $idEnt, ':id2' => $idEnt]
         );
 

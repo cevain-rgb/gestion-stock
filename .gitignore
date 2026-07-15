@@ -5,3 +5,5 @@ storage/logs/*.log
 tests.*
 test.*
 tests/
+diagramme/
+DOC_livrable/

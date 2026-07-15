@@ -112,10 +112,10 @@
         <!-- Utilisateur connecté -->
         <div class="border-t border-slate-800 px-4 py-4">
             <div class="flex items-center gap-3">
-                <div
+                <a href=<?= url('utilisateurs/comptes/' . e($_SESSION['user_id'])) ?>
                     class="w-8 h-8 rounded-full bg-violet-700 flex items-center justify-center text-xs font-bold text-white flex-shrink-0">
                     <?= strtoupper(substr($_SESSION['user_prenom'] ?? 'U', 0, 1) . substr($_SESSION['user_nom'] ?? '', 0, 1)) ?>
-                </div>
+                </a>
                 <div class="flex-1 min-w-0">
                     <div class="text-sm font-medium text-white truncate">
                         <?= e(($_SESSION['user_prenom'] ?? '') . ' ' . ($_SESSION['user_nom'] ?? '')) ?>

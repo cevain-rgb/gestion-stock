@@ -31,7 +31,7 @@
         </div>
 
         <!-- Changer mot de passe -->
-        <?php if (!empty($_SESSION['droits']['securite.modifier'])): ?>
+        <?php if ($u['id_utilisateur'] === $_SESSION['user_id']): ?>
         <div class="card card-body">
             <h2 class="font-semibold text-slate-700 mb-4">Réinitialiser le mot de passe</h2>
             <form method="POST" action="<?= url('utilisateurs/comptes/'.$u['id_utilisateur'].'/mdp') ?>">

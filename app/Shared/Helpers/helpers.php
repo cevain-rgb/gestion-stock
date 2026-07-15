@@ -62,7 +62,7 @@ function paginationLinks(int $cur, int $total, string $base): string
     $html = '<nav class="flex items-center gap-1 mt-4">';
     for ($i = 1; $i <= $total; $i++) {
         $a = $i === $cur ? 'bg-violet-600 text-white' : 'bg-white text-slate-600 hover:bg-slate-100';
-        $html .= '<a href="'.e($base.'page='.$i).'" class="px-3 py-1.5 rounded text-sm font-medium border border-slate-200 '.$a.'">'.$i.'</a>';
+        $html .= '<a href="'.e($base.'&page='.$i).'" class="px-3 py-1.5 rounded text-sm font-medium border border-slate-200 '.$a.'">'.$i.'</a>';
     }
     return $html . '</nav>';
 }

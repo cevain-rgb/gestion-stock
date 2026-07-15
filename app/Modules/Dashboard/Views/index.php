@@ -24,16 +24,16 @@ $pageTitle = 'Tableau de bord';
 
     <?php
     $cards = [
-        ['Valeur du stock',   money($kpi['valeur_stock']),  'fa-solid fa-warehouse',          'bg-violet-50 text-violet-600',  'text-violet-700'],
-        ['CA aujourd\'hui',   money($kpi['ca_jour']),       'fa-solid fa-chart-line',          'bg-emerald-50 text-emerald-600','text-emerald-700'],
-        ['Achats du jour',    money($kpi['achats_jour']),   'fa-solid fa-truck-ramp-box',      'bg-blue-50 text-blue-600',      'text-blue-700'],
-        ['Créances clients',  money($kpi['creances']),      'fa-solid fa-file-invoice-dollar', 'bg-amber-50 text-amber-600',    'text-amber-700'],
-        ['Dettes fournisseurs',money($kpi['dettes']),       'fa-solid fa-industry',            'bg-orange-50 text-orange-600',  'text-orange-700'],
-        ['Alertes stock',     $kpi['nb_alertes'] . ' produit(s)', 'fa-solid fa-triangle-exclamation', $kpi['nb_alertes'] > 0 ? 'bg-rose-50 text-rose-600' : 'bg-slate-50 text-slate-400', $kpi['nb_alertes'] > 0 ? 'text-rose-700' : 'text-slate-600'],
+        ['Valeur du stock',   money($kpi['valeur_stock']), '/structure/produits', 'fa-solid fa-warehouse',          'bg-violet-50 text-violet-600',  'text-violet-700'],
+        ['CA aujourd\'hui',   money($kpi['ca_jour']), '/vente/rapports',          'fa-solid fa-chart-line',          'bg-emerald-50 text-emerald-600','text-emerald-700'],
+        ['Achats du jour',    money($kpi['achats_jour']), '/approvisionnement/commandes',      'fa-solid fa-truck-ramp-box',      'bg-blue-50 text-blue-600',      'text-blue-700'],
+        ['Créances clients',  money($kpi['creances']), '/vente/factures?q=&statut=partielle',         'fa-solid fa-file-invoice-dollar', 'bg-amber-50 text-amber-600',    'text-amber-700'],
+        ['Dettes fournisseurs',money($kpi['dettes']), 'approvisionnement/factures?q=&statut=impayee',       'fa-solid fa-industry',            'bg-orange-50 text-orange-600',  'text-orange-700'],
+        ['Alertes stock',     $kpi['nb_alertes'] . ' produit(s)', '/structure/produits?alerte=1dd',  'fa-solid fa-triangle-exclamation', $kpi['nb_alertes'] > 0 ? 'bg-rose-50 text-rose-600' : 'bg-slate-50 text-slate-400', $kpi['nb_alertes'] > 0 ? 'text-rose-700' : 'text-slate-600'],
     ];
-    foreach ($cards as [$label, $val, $icon, $iconCls, $valCls]):
+    foreach ($cards as [$label, $val, $link, $icon, $iconCls, $valCls]):
     ?>
-    <div class="bg-white rounded-2xl border border-slate-200 p-4 shadow-sm hover:shadow-md transition">
+    <a href=<?= url($link) ?> class="bg-white rounded-2xl border border-slate-200 p-4 shadow-sm hover:shadow-md transition">
         <div class="flex items-start justify-between mb-3">
             <div class="w-9 h-9 rounded-xl flex items-center justify-center <?= $iconCls ?>">
                 <i class="<?= $icon ?> text-sm"></i>
@@ -41,7 +41,7 @@ $pageTitle = 'Tableau de bord';
         </div>
         <div class="text-lg font-bold <?= $valCls ?> leading-tight"><?= $val ?></div>
         <div class="text-xs text-slate-500 mt-0.5"><?= e($label) ?></div>
-    </div>
+    </a>
     <?php endforeach; ?>
 </div>
 

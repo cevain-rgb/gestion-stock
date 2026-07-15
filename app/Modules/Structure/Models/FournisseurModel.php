@@ -70,7 +70,7 @@ class FournisseurModel
         $params[':id'] = $id;
         $this->db->execute(
             "UPDATE fournisseur SET nom=:n, updated_at=NOW(),
-             contact=ROW(:tel,:email,ROW(:rue,:ville,:cp,:pays)::t_adresse)::t_contact)
+             contact=ROW(:tel,:email,ROW(:rue,:ville,:cp,:pays)::t_adresse)::t_contact
              WHERE id_fournisseur=:id", $params);
     }
 
