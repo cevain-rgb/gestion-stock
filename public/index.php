@@ -4,19 +4,21 @@ declare(strict_types=1);
 
 //  Constantes fondamentales 
 define('BASE_PATH', dirname(__DIR__));
-define('BASE_URL', $_ENV['BASE_URL'] ?? 'http://localhost/gestion-stock/public'); // override via .env
+define('BASE_URL', $_ENV['APP_URL'] ?? 'http://localhost/gestion-stock/public');
 
 //  Timezone & encodage 
 date_default_timezone_set('Africa/Douala');
 mb_internal_encoding('UTF-8');
 
-//  Chargement du .env (optionnel, simple parser maison) 
+//  Chargement du .env (uniquement en développement)
 $envFile = BASE_PATH . '/.env';
-if (file_exists($envFile)) {
+if (file_exists($envFile) && ($_ENV['APP_ENV'] ?? 'production') !== 'production') {
     foreach (file($envFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) as $line) {
         if (str_starts_with(trim($line), '#')) continue;
-        [$key, $val] = explode('=', $line, 2) + [1 => ''];
-        $_ENV[trim($key)] = trim($val);
+        $parts = explode('=', $line, 2);
+        if (count($parts) === 2) {
+            $_ENV[trim($parts[0])] = trim($parts[1]);
+        }
     }
 }
 
