@@ -56,7 +56,7 @@ class CommandeClientModel
 
     public function creer(int $idClient, int $idUtilisateur, string $observations, bool $estComptant = false): int
     {
-        $table = $estComptant ? 'vente_comptant' : 'commande_client';
+        $table = 'commande_client';
         $this->db->execute(
             "INSERT INTO {$table}(id_client, id_utilisateur, observations, date_document, est_comptant)
              VALUES(:c,:u,:obs,CURRENT_DATE,:comptant)",
