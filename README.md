@@ -21,8 +21,8 @@ psql -U postgres -d gestion_stock -f schema.sql
 ou
 Sous Linux/mac
 ```bash
-sudo -u postgres psql -c "CREATE DATABASE gestion_stock;"
-sudo -u postgres psql -d gestion_stock -f schema.sql
+sudo psql -U postgres -c "CREATE DATABASE gestion_stock;"
+sudo psql -U postgres -d gestion_stock -f schema.sql
 ```
 
 Le fichier `schema.sql` crée toutes les tables, triggers, fonctions et insère les données initiales
